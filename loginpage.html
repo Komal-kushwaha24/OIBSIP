@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background : linear-gradient(to right, skyblue, pink);
+            height: 100vh;
+        }
+        .container{
+            position: relative;
+            left: 550px; 
+            top: 70px ;
+            height: 70vh;
+            width: 25vw;
+            border: 4px solid rgb(11, 10, 10);
+            background-color: rgba(255,255,255,.2);
+            box-shadow: 0 0 50px rgba(0,0,0,.1);
+            box-sizing: border-box;
+            transition: 1s ease-in-out;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        @media screen and (max-width:1200px)
+        {
+            header .navbar a{
+                box-sizing: border-box ;
+                margin-right: auto;
+            }
+            .container{
+                position: relative;
+                left: 25vw;
+              height: 40vh;
+              width: 50vw;
+            } ;
+        }
+        .input{
+            background-color: transparent;
+        }
+
+       
+        #signup{
+            color: black;
+            text-decoration: none;
+        }
+        #forget{
+            text-decoration: none;
+            position: relative;
+                bottom: 32px;
+                left: 130px;
+                color:black;
+        }
+        div{
+            margin: 14px ;
+            color: black;
+
+         }
+       
+        #loginpage{
+            text-align: center;
+            color:black;
+            text-decoration: underline;
+            text-transform: capitalize;
+            font-size: large;
+            margin-top: 4px;
+        }
+        
+        
+        #btn{
+            text-align: center;
+            background-color: blue;
+            color: white;
+            margin:20px;
+            position: relative;
+            left: 0px;
+            width: 190px;
+            height: 33px;
+            border-radius: 20px;
+            }
+            .footer{
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                font-size: xx-large;
+                color: black;
+            }
+        .signin-link:hover{
+            transform: scale(1.05);
+        
+        }
+       
+        #btn:hover{
+            transform: scale(1.10);
+           
+        }
+        #btn:active{
+            border: 3px solid black;
+            
+            color: black;
+        }
+        #forget:hover{
+            transform: scale(1.5);
+            transition: all;
+            color: blue;
+
+        }
+        .signup-link:hover{
+            transform: scale(1.2);
+            /* transition: all; */
+            color: blue;
+
+        }
+        .signin-link:hover{
+            transform: scale(1.2);
+            /* transition: all; */
+            color: blue;
+            
+        } 
+        #forget:active{
+            color: rgb(20, 19, 19);
+        }
+        #username:hover{
+            transform: scale(1.05);
+        }
+        #email:hover{
+            transform: scale(1.05);
+        }
+        #password:hover{
+            transform: scale(1.05);
+        }
+        header{
+            background-color: black;
+            color: white;
+            text-transform: capitalize;
+            height: 7vh;
+            box-sizing: border-box;
+            position:relative;
+            top: 0 px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 100px;
+         
+
+        }
+        
+            
+        
+      .navbar a{
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+        margin-left: 40px;
+
+      }
+      .navbar button{
+        margin-left: 40px;
+        background-color: bisque;
+        color: black;
+        text-decoration: none;
+        border: 2px solid white;
+        border-radius: 6 px;
+        font-size: large;
+        font-weight: 200;
+      }
+      .navbar button:hover{
+        transform: scale(1.1);
+        border: 3px solid black;
+        color: red;
+      }
+      .navbar button:active{
+        color: blue;
+        background-color: white;
+      }
+      .navbar a:hover{
+        text-decoration: underline;
+        animation:  2s ease-in 1ms 6 normal ;
+        align-self: start;
+      }
+      
+
+      .container.active .form-wrapper.signin{
+      transform: scale(0) ;
+      }
+      .container.active .form-wrapper.signup{
+      transform: scale(1) ;
+      }
+      .container .form-wrapper.signup{
+        top: 0;
+        position: absolute;
+        transform: scale(0);
+      }
+
+    
+      
+    </style>
+</head>
+<body><header>
+    <h2>website</h2>
+    <div class="navbar">
+        <a href=#>home</a>
+        <a href="#">services</a>
+        <a href="#">about</a>
+        <a href=#>contact us</a>
+        <button class="button">login</button>
+    </div>
+</header>
+<div class="container">
+    <div class="form-wrapper signin">
+    <form action="">
+    
+        <div id="loginpage"> <h1>sign in</h1></div><br>
+        
+            
+                <div class="input">
+                    <div id="email"><input type="text" placeholder="email id" >
+                    </div>
+                    <div>
+                    <input type="text"  id="password" placeholder="password" maxlength="8" required>
+
+                    </div>
+                 </div>
+                    <div id="rememberme">
+                          <input type="checkbox" name="remember me" >remember me
+                    </div>
+                    <div> <a href="#"       id="forget">forget password ?</a>
+                    </div>
+                          <button type="submit" id="btn">Login</button>
+                          
+            
+                    <p >Don't have an account?
+                       <a href="#" class="signup-link"> Sign Up </a>
+                    </p>  
+    </form>
+    </div>
+
+  <div class="form-wrapper signup">
+        <form action="">
+    
+        <div id="loginpage"> <h1>sign up</h1></div><br>
+        
+             
+                <div class="input">
+                    <div id="username"><input type="text" placeholder="username" required>
+                    
+                        </div>
+                    <div id="email"><input type="text" placeholder="email id"  required>
+                    </div>
+                    <div>
+                         <input type="text"  id="password" placeholder="password" maxlength="8" required>
+                         </div>
+                          <div ><input type="text" id="password" placeholder="confirm password" required >
+                    
+                    </div>
+                </div>
+                    <div id="rememberme">
+                          <input type="checkbox" name="remember me" >remember me
+                    </div>
+                    <div> <a href="#" id="forget">forget password ?</a>
+            
+                          <button type="submit" id="btn">sign up</button>
+                          
+            
+                    <p >Alerady have an account?
+                       <a href="#" class="signin-link"> Sign in </a>
+                    </p>
+                   
+  
+        </form>
+   </div>
+</div>
+
+<script>
+    const signinlink = document.querySelector('.signin-link');
+    const signuplink = document.querySelector('.signup-link');
+    const wrapper= document.querySelector('.container');
+    
+    signinlink.addEventListener('click',() => {wrapper.classList.toggle('active');
+
+    });
+    signuplink.addEventListener('click',() => {wrapper.classList.toggle('active');
+
+});
+</script>
+</body>
+</html>
